@@ -12,7 +12,36 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="static\css\styles.css">
   </head>
-  <body>
+  <body style="background-color: #202020; color: #fff;">
+  <style>
+.tranding-slide {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+.tranding-slide .tranding-slide-img img {
+width: 100%;
+height: auto;
+}
+.tranding-slide .tranding-slide-content {
+margin-top: 1rem;
+}
+.tranding-slide .tranding-slide-content-bottom {
+margin-top: 1rem;
+}
+.Mangaka_name,
+.Manga_name,
+.Manga_rate,
+.N_chp {
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 0rem;
+  display: flex;
+  gap: 0rem;
+}
+  </style>
     <section id="tranding">
       <div class="container">
         <h3 class="text-center section-subheading">Tendencia</h3>
@@ -26,21 +55,20 @@
                 <img src="static\images\DBS.webp">
               </div>
               <div class="tranding-slide-content">
-                <h3 class="N_chp">Cap: #098</h3>
+                <p class="N_chp">Cap: #098</p>
                 <div class="tranding-slide-content-bottom">
                   <h2 class="Manga_name">
                     Dragon Ball Super
-                  </h2>
+                  </h4>
                   <p class="Mangaka_name">Akira Toriyama</p>
-                  <h3 class="Manga_rate">
-                    <span>Rate: 4</span>
+                  <h4 class="Manga_rate" sy>Rate: 
                     <div class="rating">
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                     </div>
-                  </h3>
+                  </h4>
                 </div>
               </div>
             </div>
