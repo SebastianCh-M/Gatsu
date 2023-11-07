@@ -67,7 +67,6 @@
             background-color: transparent;
             padding: 6px 10px;
         }
-
         .content {
             flex: 1;
         }
@@ -105,7 +104,12 @@
                     </div>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="">Iniciar Sesión</a></li>
+                    {% if request.user.is_authenticated %}
+                        <li><a href="">Salir</a></li>
+                        <li><a href="">{{ user.username | upper }}, bienvenido</a></li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -115,7 +119,6 @@
             {% block content %}{% endblock %}
         </div>
     </div>
-
 </body>
 <footer class="bg-light text-center text-white footer">
     <div class="container p-4 pb-0">
