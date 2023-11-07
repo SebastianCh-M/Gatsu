@@ -11,11 +11,43 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="static\css\styles.css">
+    
   </head>
-  <body>
+  <body style="background-color: #202020; color: #fff;">
+  <style>
+.tranding-slide {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+.tranding-slide .tranding-slide-img img {
+width: 90%;
+height: auto;
+}
+.tranding-slide .tranding-slide-content {
+margin-top: 1rem;
+}
+.tranding-slide .tranding-slide-content-bottom {
+margin-top: 1rem;
+}
+.Mangaka_name,
+.Manga_name,
+.Manga_rate,
+.N_chp {
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 0rem;
+  display: flex;
+  gap: 0rem;
+}
+  </style>
     <section id="tranding">
       <div class="container">
-        <h3 class="text-center section-subheading">Tendencia</h3>
+        <hr>
+        <h2 class="text-center section-subheading">Tendencia</h2>
+        <hr>
       </div>
       <div class="container">
         <div class="swiper tranding-slider">
@@ -26,11 +58,11 @@
                 <img src="static\images\DBS.webp">
               </div>
               <div class="tranding-slide-content">
-                <h3 class="N_chp">Cap: #098</h3>
+                <p class="N_chp">Cap: #098</p>
                 <div class="tranding-slide-content-bottom">
                   <h2 class="Manga_name">
                     Dragon Ball Super
-                  </h2>
+                  </h4>
                   <p class="Mangaka_name">Akira Toriyama</p>
                   <h3 class="Manga_rate">
                     <span>Rate: 4</span>
@@ -40,7 +72,7 @@
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                     </div>
-                  </h3>
+                  </h4>
                 </div>
               </div>
             </div>
@@ -124,6 +156,12 @@
         </div>
       </div>
     </section>
+    <div class="container">
+      <hr>
+      <h2 style="display: flex; padding-left: 10%;">Recientes</h2>
+      <hr>
+    </div>
+
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

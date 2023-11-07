@@ -137,16 +137,6 @@ body {
   bottom: 0;
 }
 
-.tranding-slide-content .N_chp {
-  position: absolute;
-  bottom: 0rem;
-  left: 2rem;
-  color: black;
-
-}
-.Mangaka_Name{
-  color: black;
-}
 .tranding-slide-content .tranding-slide-content-bottom {
   position: absolute;
   bottom: 2rem;
@@ -154,15 +144,10 @@ body {
   color: var(--white);
 }
 .Manga_name{
+  font-weight: bold;
   padding-bottom: 0rem;
   display: flex;
   gap: 0rem;
-  color: black;
-}
-.Manga_rate{
-  padding-top: 1rem;
-  display: flex;
-  gap: 1rem;
   color: black;
 }
 
