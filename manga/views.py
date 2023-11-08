@@ -3,6 +3,7 @@ from django.views.generic import View
 from .forms import PostCreateForm
 from .models import tipoEstado, tipoSubida, Manga2
 
+
 # Create your views here.
 
 class MangaListView(View):
