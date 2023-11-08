@@ -13,8 +13,3 @@ class mangaForm(forms.ModelForm):
         fields = ['idManga', 'nombreManga', 'ano_publicacion','tsubida','mangaka','sinopsis','editorial','genero','estado','imagen'] 
 
 
-class imagenForm(forms.Form):
-    idLote = forms.CharField(max_length=255, primary_key= True)
-    capitulo = forms.CharField(max_length=255)
-    manga = forms.ModelChoiceField(queryset=Manga3.objects.all())       
-    grupoImagen = forms.ImageField(widget=forms.ClearableFileInput(attrs={'multiple': True}))

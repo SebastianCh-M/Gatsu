@@ -2,13 +2,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-<<<<<<< HEAD
 from manga.views import registrarManga, manga_list
-from .views import HomeView, LoginView, RecientesView, TopMangasView, SobreGatsuView
-=======
-
 from .views import HomeView, LoginView, RecientesView, TopMangasView, SobreGatsuView, MiBibliotecaView, RecuperarView
->>>>>>> 690854621349bcd18dd46aa3914c92c14ce61e01
 
 urlpatterns = [
     path('admin/', admin.site.urls),
