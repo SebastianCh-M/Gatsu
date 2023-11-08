@@ -1,5 +1,4 @@
 from django.db import models
-from multiupload.fields import MultiImageField
 
 # Create your models here.
 
