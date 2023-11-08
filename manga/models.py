@@ -1,4 +1,5 @@
 from django.db import models
+from multiupload.fields import MultiImageField
 
 # Create your models here.
 
@@ -15,7 +16,22 @@ class tipoSubida(models.Model):
 class tipoEstado(models.Model):
     estado=models.CharField(max_length=30)    
 
-class Manga2(models.Model):
+#class Manga2(models.Model):
+#    idManga=models.CharField(max_length=30, primary_key=True)
+#    nombreManga=models.CharField(max_length=50)
+#    ano_publicacion = models.CharField(max_length=50)
+#    tsubida=models.ForeignKey(tipoSubida, on_delete=models.CASCADE)
+#    mangaka=models.CharField(max_length=50)
+#    sinopsis=models.CharField(max_length=500)
+#    editorial=models.CharField(max_length=50)
+#    genero=models.CharField(max_length=50)
+#    estado=models.ForeignKey(tipoEstado, on_delete=models.CASCADE)
+    #imagen = models.ImageField(upload_to='portadas/')  # configurar la ubicación de almacenamiento según tus necesidades 
+    # 
+    # 
+
+
+class Manga3(models.Model):
     idManga=models.CharField(max_length=30, primary_key=True)
     nombreManga=models.CharField(max_length=50)
     ano_publicacion = models.CharField(max_length=50)
@@ -25,4 +41,7 @@ class Manga2(models.Model):
     editorial=models.CharField(max_length=50)
     genero=models.CharField(max_length=50)
     estado=models.ForeignKey(tipoEstado, on_delete=models.CASCADE)
-    #imagen = models.ImageField(upload_to='portadas/')  # configurar la ubicación de almacenamiento según tus necesidades    
+    imagen = models.ImageField(upload_to='D:\Django Proyectos\Gatsu\static\images')  # configurar la ubicación de almacenamiento según tus necesidades 
+    #imagen = MultiImageField()
+
+
