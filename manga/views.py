@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import View
-from .forms import PostCreateForm
-from .models import tipoEstado, tipoSubida, Manga2
+from .forms import mangaForm, PostCreateForm
+from .models import tipoEstado, tipoSubida, Manga3
 
 
 # Create your views here.
@@ -13,18 +13,18 @@ class MangaListView(View):
         }
         return render(request, 'manga_list.html', context )
     
-class MangaCreateView(View):
-    def get(self, request,*args, **kwargs):
-        context={
+#class MangaCreateView(View):
+#    def get(self, request,*args, **kwargs):
+#        context={
+#            
+#        }
+#        return render(request, 'manga_create.html', context)
+#    
+#    def post(self, request,*args, **kwargs):
+#        context={
             
-        }
-        return render(request, 'manga_create.html', context)
-    
-    def post(self, request,*args, **kwargs):
-        context={
-            
-        }
-        return render(request, 'manga_create.html', context)
+#        }
+#        return render(request, 'manga_create.html', context)
     
 def formManga(request):
     tEstado=tipoEstado.objects.all()
@@ -34,7 +34,7 @@ def formManga(request):
     return render(request, 'registrarM.html', datos)
 
 
-def guardarManga(request):
+#def guardarManga(request):
     v_idManga=request.POST.get('idManga')
     v_nombreM=request.POST.get('nombreManga')
     v_anoP=request.POST.get('ano_publicacion')
@@ -64,3 +64,19 @@ def guardarManga(request):
     Manga2.save(nuevo)
 
     return render(request, 'loginC.html')    
+
+
+
+def registrarManga(request):
+    if request.method == 'POST':
+        form = mangaForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('manga_list')
+    else:
+        form = mangaForm()
+    return render(request, 'manga_create.html', {'form': form})
+
+def manga_list(request):
+    Man = Manga3.objects.all()
+    return render(request, 'manga_list.html', {'mangas': Man})
