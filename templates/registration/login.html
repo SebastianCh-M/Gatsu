@@ -6,17 +6,20 @@
 
 <br>
 
+<style>
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        color: black;
+    }
+</style>
+
 <form action="" method="post">
-
     {% csrf_token %}
-
-    <input type="text" name="username" id="" placeholder="Nombre de usuario">
+    <input type="text" name="username" id="" placeholder="Nombre de usuario" style="font-weight: bold;">
     <br>
-    <input type="email" name="password" id="" placeholder="Contraseña">
+    <input type="password" name="password" id="" placeholder="Contraseña" style="font-weight: bold;">
     <br>
     <button type="">Iniciar Sesion</button>
-    
-
 </form>
 
 {% endblock %}
