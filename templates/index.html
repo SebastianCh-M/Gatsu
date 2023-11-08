@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Index</title>
     <style>
         body {
@@ -103,14 +105,23 @@
                         </div>
                     </div>
                 </form>
-                <ul class="nav navbar-nav navbar-right">
-                    {% if request.user.is_authenticated %}
-                        <li><a href={% url 'logout' %}>Salir</a></li>
-                        <li><a href="">{{ user.username | upper }}, bienvenido</a></li>
-                    {% else %}
-                        <li><a href={% url 'login' %}>Iniciar Sesión</a></li>
-                    {% endif %}
-                </ul>
+                {% if request.user.is_authenticated %}
+                <li class="dropdown navbar-right">
+                    <a href="#" class="dropdown-toggle"  data-toggle="dropdown">
+                        <span style="color: #555;">{{ user.username | upper }}</span>, Bienvenido <span class="caret" style="color: #555;"></span>
+                    </a>
+                    <ul class="dropdown-menu" style="background-color: #333;">
+                        <li><a href="#" style="color: #555;">Mi Cuenta</a></li>
+                        <li><a href="#" style="color: #555;">Mi Biblioteca</a></li>
+                        <li><a href="#" style="color: #555;">Subscripción</a></li>
+                        <li><a href="#" style="color: #555;">Desconectar</a></li>
+                    </ul>
+                </li>
+                {% else %}
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url 'login' %}" style="color: #fff;">Iniciar Sesión</a></li>
+                    </ul>
+                {% endif %}
             </div>
         </div>
     </nav>
