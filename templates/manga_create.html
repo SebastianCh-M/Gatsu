@@ -1,9 +1,8 @@
-<form method="POST">
-{% csrf_token %}
-title{{form.tittle}}
-<br>
-excerpt{{form.excerpt}}
-<br>
-content{{form.content}}
-<button type="submit">Submit</button>
+{% extends 'index.html' %}
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
 </form>
+{% endblock %}
