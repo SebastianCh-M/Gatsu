@@ -105,10 +105,10 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     {% if request.user.is_authenticated %}
-                        <li><a href="">Salir</a></li>
+                        <li><a href={% url 'logout' %}>Salir</a></li>
                         <li><a href="">{{ user.username | upper }}, bienvenido</a></li>
                     {% else %}
-                        <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+                        <li><a href={% url 'login' %}>Iniciar Sesión</a></li>
                     {% endif %}
                 </ul>
             </div>

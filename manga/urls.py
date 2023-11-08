@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import MangaListView, MangaCreateView
+from .views import MangaListView, MangaCreateView, exit
 
 app_name="manga"
 
