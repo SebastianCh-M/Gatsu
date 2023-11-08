@@ -45,3 +45,11 @@ class Manga3(models.Model):
     #imagen = MultiImageField()
 
 
+class SetImagen(models.Model):
+    idLote = models.CharField(max_length=255, primary_key=True)
+    capitulo= models.CharField(max_length=50) 
+    manga = models.ForeignKey(Manga3, on_delete=models.CASCADE)
+    grupoImagen = models.ImageField(upload_to='D:\Django Proyectos\Gatsu\static\images')
+        
+
+
