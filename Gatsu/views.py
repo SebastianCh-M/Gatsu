@@ -3,7 +3,6 @@ from django.views import View
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
-
 class HomeView(View):
     def get(self, request, *args, **kwargs):
         context = {}
