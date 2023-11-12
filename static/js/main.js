@@ -19,4 +19,6 @@ var TrandingSlider = new Swiper('.tranding-slider', {
       prevEl: '.swiper-button-prev',
     }
   });
-  console.log('Hola')
+  console.log('Holaaaaa')
+
+  
