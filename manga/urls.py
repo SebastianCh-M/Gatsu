@@ -15,9 +15,6 @@ urlpatterns = [
     path('create/', MangaCreateView.as_view(), name="create"),
     path('manga_list/', views.manga_list, name='manga_list'),
     path('manga_create', formManga),
-
-
-
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
