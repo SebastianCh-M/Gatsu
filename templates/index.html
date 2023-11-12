@@ -61,7 +61,6 @@
                         <li class="nav-item"><a class="nav-link" style="color: #fff;" href="SobreGatsu.html">Gatsu</a>
                         </li>
                     </ul>
-                    {% if request.user.is_authenticated %}
                     <li class="dropdown ms-auto">
                         <a href="#" class="btn btn-secondary dropdown-toggle" style="background-color: #202020;"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -77,7 +76,7 @@
                             </ul>
                         </div>
                     </li>
-                    {% else %}
+
                     <div class="container p-6">
                         <div class="row">
                             <div class="col-md-6 offset-md-3">
@@ -160,13 +159,11 @@
                             </div>
                         </div>
                     </div>
-                    {% endif %}
                 </div>
             </div>
         </nav>
         <div class="container-fluid">
             <div class="content">
-                {% block content %}{% endblock %}
             </div>
         </div>
     </div>
