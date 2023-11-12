@@ -8,7 +8,7 @@ document.getElementById("login-form").addEventListener("submit", (event) => {
 
   const account = new ManageAccount();
   account.authenticate(email, password);
-  
+
 });
 
 console.log('login-form');

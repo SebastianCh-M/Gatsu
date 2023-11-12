@@ -3,14 +3,14 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDjPKQyFAufmVd-ap1rlmYfeq53zvqH5Z4",
-    authDomain: "gatsu-fbddf.firebaseapp.com",
-    databaseURL: "https://gatsu-fbddf-default-rtdb.firebaseio.com",
-    projectId: "gatsu-fbddf",
-    storageBucket: "gatsu-fbddf.appspot.com",
-    messagingSenderId: "330110714731",
-    appId: "1:330110714731:web:222876623105373d21c22e"
-  };
+  apiKey: "AIzaSyDjPKQyFAufmVd-ap1rlmYfeq53zvqH5Z4",
+  authDomain: "gatsu-fbddf.firebaseapp.com",
+  databaseURL: "https://gatsu-fbddf-default-rtdb.firebaseio.com",
+  projectId: "gatsu-fbddf",
+  storageBucket: "gatsu-fbddf.appspot.com",
+  messagingSenderId: "330110714731",
+  appId: "1:330110714731:web:222876623105373d21c22e"
+};
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
@@ -26,8 +26,8 @@ export class ManageAccount {
       })
       .catch((error) => {
         console.error(error.message);
-            // Mostrar alerta de error de registro
-            alert("Error al registrar: " + error.message);
+        // Mostrar alerta de error de registro
+        alert("Error al registrar: " + error.message);
       });
   }
 
@@ -40,8 +40,8 @@ export class ManageAccount {
       })
       .catch((error) => {
         console.error(error.message);
-                // Mostrar alerta de error de inicio de sesión
-                alert("Error al iniciar sesión: " + error.message);
+        // Mostrar alerta de error de inicio de sesión
+        alert("Error al iniciar sesión: " + error.message);
       });
   }
 

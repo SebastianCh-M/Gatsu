@@ -2,9 +2,9 @@
 {% block content %}
 <ul>
     {% for m in mangas %}
-        <li>{{ m.idManga }}</li>
-        <p>{{ m.nombreManga }}</p>
-        <img src="{{ m.imagen.url }}" alt="{{ m.idManga }}" width="200">
+    <li>{{ m.idManga }}</li>
+    <p>{{ m.nombreManga }}</p>
+    <img src="{{ m.imagen.url }}" alt="{{ m.idManga }}" width="200">
     {% endfor %}
 </ul>
 {% endblock %}

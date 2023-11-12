@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <!--SCRIPTS JS FIREBASE-->
+    <!--SCRIPTS JS FIREBASE-->
     <script type="module" src="firebaseconect.js"></script>
     <script type="module" src="signup.js"></script>
     <script type="module" src="login.js"></script>
@@ -14,7 +14,8 @@
     <!-- Toastify CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- Your custom styles -->
-    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/gatsu-fbddf.appspot.com/o/Styles.css?alt=media&token=5036f23e-a456-4dc4-9b81-7da2f7a40599">
+    <link rel="stylesheet"
+        href="https://firebasestorage.googleapis.com/v0/b/gatsu-fbddf.appspot.com/o/Styles.css?alt=media&token=5036f23e-a456-4dc4-9b81-7da2f7a40599">
     <!-- Other meta tags -->
     <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -24,7 +25,7 @@
 </head>
 
 <body>
-    
+
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="bootstrap" viewBox="0 0 118 94">
 
@@ -55,8 +56,10 @@
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="navbar-nav" style="color: #fff;">
                         <li class="nav-item"><a class="nav-link" style="color: #fff;" href="Home.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" style="color: #fff;" href="Recientes.html">Descubre</a></li>
-                        <li class="nav-item"><a class="nav-link" style="color: #fff;" href="SobreGatsu.html">Gatsu</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #fff;" href="Recientes.html">Descubre</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" style="color: #fff;" href="SobreGatsu.html">Gatsu</a>
+                        </li>
                     </ul>
                     {% if request.user.is_authenticated %}
                     <li class="dropdown ms-auto">
