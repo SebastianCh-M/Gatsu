@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Post, Manga3, SetImagen
+from .models import Post, Manga3
 
 class PostCreateForm(forms.ModelForm):
     class Meta:
