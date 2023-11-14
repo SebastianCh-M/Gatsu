@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
-from .forms import mangaForm, PostCreateForm
-from .models import tipoEstado, tipoSubida, Manga3
+from .forms import mangaForm,imagenForm ,PostCreateForm
+from .models import tipoEstado, tipoSubida, Manga3, SetImagen
+from django.core.exceptions import ObjectDoesNotExist
 
 
 # Create your views here.
@@ -67,6 +68,8 @@ def formManga(request):
 
 
 
+
+#Formulario de Registro de Mnaga
 def registrarManga(request):
     if request.method == 'POST':
         form = mangaForm(request.POST, request.FILES)
@@ -80,3 +83,43 @@ def registrarManga(request):
 def manga_list(request):
     Man = Manga3.objects.all()
     return render(request, 'manga_list.html', {'mangas': Man})
+
+# Formulario de Registro de Multiples Imagenes
+
+def registrarImagenes2(request):
+    if request.method == 'POST':
+        form = imagenForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('manga_list')
+    else:
+        form = imagenForm()
+    return render(request, 'capitulos_form.html', {'form': form})
+
+
+
+def registrarImagenes(request):
+    if request.method == 'POST':
+        v_idLote = request.POST.get('idLote')
+        v_capitulo = request.POST.get('capitulo')
+        v_manga = request.POST.get('manga')  # Assuming test is a dropdown or input field in the form
+        v_grupoImagen = request.FILES.getlist('grupoImagen')
+
+        manga = Manga3.objects.get(manga=v_manga)
+
+        # Create the model instance and save it
+        nuevo=SetImagen()
+        nuevo.idLote=v_idLote
+        nuevo.capitulo=v_capitulo
+        nuevo.manga=manga
+        nuevo.grupoImagen=v_grupoImagen
+
+        SetImagen.save(nuevo)
+        
+
+        return redirect('manga_list')
+    else:
+        # Render the form page
+        mangas = Manga3.objects.all()
+        return render(request, 'capitulos_form.html', {'mangas': mangas})
+
