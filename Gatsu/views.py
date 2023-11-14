@@ -3,11 +3,10 @@ from django.views import View
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
-
 class HomeView(View):
     def get(self, request, *args, **kwargs):
         context = {}
-        return render(request, 'home.html', context)
+        return render(request, 'Home.html', context)
 
 
 class RecientesView(View):
