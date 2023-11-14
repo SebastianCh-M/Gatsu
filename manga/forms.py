@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Post, Manga3, SetImagen
+from .models import Post, Manga3
 
 # pip install django-multiupload
 from multiupload.fields import MultiFileField
