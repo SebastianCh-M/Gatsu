@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from manga.views import registrarManga, manga_list
+from manga.views import registrarManga, manga_list, registrarImagenes
 from .views import HomeView, LoginView, RecientesView, TopMangasView, SobreGatsuView, MiBibliotecaView, RecuperarView
 
 urlpatterns = [
@@ -17,7 +17,8 @@ urlpatterns = [
     path('Recuperar', RecuperarView.as_view(), name='Recuperar'),
     path('', HomeView.as_view(), name='default'),  # Ruta para la página por defecto
     path('manga_create', registrarManga),
-    path('manga_list', manga_list)
+    path('manga_list', manga_list),
+    path('capitulos_form',registrarImagenes)
 ] 
 
 
