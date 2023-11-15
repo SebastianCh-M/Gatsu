@@ -55,9 +55,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="navbar-nav" style="color: #fff;">
-                        <li class="nav-item"><a class="nav-link" style="color: #fff;" href="Home.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" style="color: #fff;" href="Recientes.html">Descubre</a></li>
-                        <li class="nav-item"><a class="nav-link" style="color: #fff;" href="SobreGatsu.html">Gatsu</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #fff;" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #fff;" href="{% url 'recientes' %}">Descubre</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #fff;" href="{% url 'sobre-gatsu' %}">Gatsu</a></li>
                     </ul>
                     {% if request.user.is_authenticated %}
                     <li class="dropdown ms-auto">
@@ -69,7 +69,7 @@
                         <div class="dropdown">
                             <ul class="dropdown-menu" style="background-color: #202020;">
                                 <li><a href="#" style="color: #fff;">Mi Cuenta</a></li>
-                                <li><a href="MiBiblioteca.html" style="color: #fff;">Mi Biblioteca</a></li>
+                                <li><a href="{% url 'mi-biblioteca' %}" style="color: #fff;">Mi Biblioteca</a></li>
                                 <li><a href="#" style="color: #fff;">Subscripción</a></li>
                                 <li><a href="{% url 'logout' %}" style="color: #fff;">Desconectar</a></li>
                             </ul>
