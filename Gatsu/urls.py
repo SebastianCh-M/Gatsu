@@ -3,21 +3,65 @@ from django.urls import path, include
 from django.http import HttpResponse
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import HomeView, RecientesView, TopMangasView, SobreGatsuView, MiBibliotecaView, RecuperarView
+from manga.views import formRevista, listaRevista, deleR, updaR, formNombreManga, listaNombreManga, deleN, updaN, formMangaGatsu, listaMangaGatsu, deleM, updaM, formCapitulo, listaCapitulo, deleC, updaC, formImagen, listaImagen, deleI, updaI
+<<<<<<< HEAD
+from .views import HomeView, LoginView, RecientesView, TopMangasView, SobreGatsuView, MiBibliotecaView, RecuperarView
+=======
+from .views import HomeView, RecientesView, TopMangasView, SobreGatsuView, MiBibliotecaView
+>>>>>>> 32c02f6c25973991b0aaf9723ae0963691e984ba
 
 urlpatterns = [
 
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', HomeView.as_view(), name = "home"),
-    path('home', HomeView.as_view(), name='home'),
-    path('recientes', RecientesView.as_view(), name='recientes'),
-    path('top-mangas', TopMangasView.as_view(), name='top-mangas'),
-    path('sobre-gatsu', SobreGatsuView.as_view(), name='sobre-gatsu'),
-    path('mi-biblioteca', MiBibliotecaView.as_view(), name='mi-biblioteca'),
-    path('Recuperar', RecuperarView.as_view(), name='Recuperar'),
-    path('manga/', include('manga.urls')),
-    
+    path('Home', HomeView.as_view(), name='home'),
+    path('Recientes', RecientesView.as_view(), name='recientes'),
+    path('TopMangas', TopMangasView.as_view(), name='TopMangas'),
+    path('SobreGatsu', SobreGatsuView.as_view(), name='SobreGatsu'),
+    path('MiBiblioteca', MiBibliotecaView.as_view(), name='MiBiblioteca'),
+    path('', HomeView.as_view(), name='default'),  # Ruta para la página por defecto
+
+    #Revisa
+    path('formRevista',formRevista),
+    path('listaRevista',listaRevista),
+    path('deleR/<int:id>', deleR),
+    path('updaR/<int:id>', updaR),
+
+    #Nombre Manga
+    path('formNombreManga',formNombreManga),
+    path('listaNombreManga',listaNombreManga),
+    path('deleN/<int:id>', deleN),
+    path('updaN/<int:id>', updaN),
+
+    #Manga Gatsu
+    path('formMangaGatsu',formMangaGatsu),
+    path('listaMangaGatsu',listaMangaGatsu),
+    path('deleM/<int:id>', deleM),
+    path('updaM/<int:id>', updaM),
+
+    #Capitulo
+    path('formCapitulo',formCapitulo),
+    path('listaCapitulo',listaCapitulo),
+    path('deleC/<int:id>', deleC),
+    path('updaC/<int:id>', updaC),
+
+    #Imagen
+    path('formImagen',formImagen),
+    path('listaImagen',listaImagen),
+    path('deleI/<int:id>', deleI),
+    path('updaI/<int:id>', updaI),
+
+
+
+
+
+
+    #path('delete_revista/<int:revista_id>', delete_Revista),
+    #path('eliminarR/<int:pk>', eliminarRevista),
+    #path('manga_create', registrarManga),
+    #path('manga_list', manga_list),
+    #path('capitulos_form',registrarImagenes)
 ] 
 
 
