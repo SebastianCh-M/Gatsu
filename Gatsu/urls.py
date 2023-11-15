@@ -4,19 +4,15 @@ from django.http import HttpResponse
 from django.conf import settings
 from django.conf.urls.static import static
 from manga.views import formRevista, listaRevista, deleR, updaR, formNombreManga, listaNombreManga, deleN, updaN, formMangaGatsu, listaMangaGatsu, deleM, updaM, formCapitulo, listaCapitulo, deleC, updaC, formImagen, listaImagen, deleI, updaI
-<<<<<<< HEAD
-from .views import HomeView, LoginView, RecientesView, TopMangasView, SobreGatsuView, MiBibliotecaView, RecuperarView
-=======
 from .views import HomeView, RecientesView, TopMangasView, SobreGatsuView, MiBibliotecaView
->>>>>>> 32c02f6c25973991b0aaf9723ae0963691e984ba
 
 urlpatterns = [
 
     path('admin', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', HomeView.as_view(), name = "home"),
-    path('Home', HomeView.as_view(), name='home'),
-    path('Recientes', RecientesView.as_view(), name='recientes'),
+    path('Home', HomeView.as_view(), name='Home'),
+    path('Recientes', RecientesView.as_view(), name='Recientes'),
     path('TopMangas', TopMangasView.as_view(), name='TopMangas'),
     path('SobreGatsu', SobreGatsuView.as_view(), name='SobreGatsu'),
     path('MiBiblioteca', MiBibliotecaView.as_view(), name='MiBiblioteca'),
