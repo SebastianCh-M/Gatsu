@@ -3,7 +3,7 @@ from django.urls import path, include
 from django.http import HttpResponse
 from django.conf import settings
 from django.conf.urls.static import static
-from manga.views import registrarManga, manga_list, registrarImagenes
+from manga.views import formRevista, listaRevista, deleR, updaR, formNombreManga, listaNombreManga, deleN, updaN, formMangaGatsu, listaMangaGatsu, deleM, updaM, formCapitulo, listaCapitulo, deleC, updaC, formImagen, listaImagen, deleI, updaI
 from .views import HomeView, LoginView, RecientesView, TopMangasView, SobreGatsuView, MiBibliotecaView, RecuperarView
 
 urlpatterns = [
@@ -19,9 +19,47 @@ urlpatterns = [
     path('MiBiblioteca', MiBibliotecaView.as_view(), name='MiBiblioteca'),
     path('Recuperar', RecuperarView.as_view(), name='Recuperar'),
     path('', HomeView.as_view(), name='default'),  # Ruta para la página por defecto
-    path('manga_create', registrarManga),
-    path('manga_list', manga_list),
-    path('capitulos_form',registrarImagenes)
+
+    #Revisa
+    path('formRevista',formRevista),
+    path('listaRevista',listaRevista),
+    path('deleR/<int:id>', deleR),
+    path('updaR/<int:id>', updaR),
+
+    #Nombre Manga
+    path('formNombreManga',formNombreManga),
+    path('listaNombreManga',listaNombreManga),
+    path('deleN/<int:id>', deleN),
+    path('updaN/<int:id>', updaN),
+
+    #Manga Gatsu
+    path('formMangaGatsu',formMangaGatsu),
+    path('listaMangaGatsu',listaMangaGatsu),
+    path('deleM/<int:id>', deleM),
+    path('updaM/<int:id>', updaM),
+
+    #Capitulo
+    path('formCapitulo',formCapitulo),
+    path('listaCapitulo',listaCapitulo),
+    path('deleC/<int:id>', deleC),
+    path('updaC/<int:id>', updaC),
+
+    #Imagen
+    path('formImagen',formImagen),
+    path('listaImagen',listaImagen),
+    path('deleI/<int:id>', deleI),
+    path('updaI/<int:id>', updaI),
+
+
+
+
+
+
+    #path('delete_revista/<int:revista_id>', delete_Revista),
+    #path('eliminarR/<int:pk>', eliminarRevista),
+    #path('manga_create', registrarManga),
+    #path('manga_list', manga_list),
+    #path('capitulos_form',registrarImagenes)
 ] 
 
 

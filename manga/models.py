@@ -69,12 +69,15 @@ class Administrador(models.Model):
 
     def __str__(self):
         return self.nombre
-    
+
+#POST,DELETE,UPDATE    
 class Revista(models.Model):
     editoriales = models.CharField(max_length=100)
 
     def __str__(self):
         return self.editoriales
+
+
 
 class NombreManga(models.Model):
     revista = models.ForeignKey(Revista, on_delete=models.CASCADE)
@@ -125,6 +128,7 @@ class MangaGatsu(models.Model):
     def __str__(self):
         return str(self.nombre_manga.nombreManga)
 
+#POST,DELETE,UPDATE
 class Capitulo(models.Model):
     titulo = models.CharField(max_length=100)
     numero = models.IntegerField()
@@ -170,6 +174,20 @@ class Valoracion(models.Model):
 
     def __str__(self):
         return f"Valoración de {self.usuario.nombre} en {self.manga.nombre}"
+    
 
+
+
+
+
+
+
+#NO TOMAR EN CUENTA
+class Revista2(models.Model):
+    editorial_id = models.AutoField(primary_key=True)
+    editoriales = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.editoriales
 
 
