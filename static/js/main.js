@@ -78,8 +78,6 @@ var TrandingSlider = new Swiper('.tranding-slider', {
       prevEl: '.swiper-button-prev',
     }
   });
-  console.log('Holaaaaa')
-
 
   var TrandingSlider = new Swiper('.tranding-slider', {
     effect: 'coverflow',
@@ -102,9 +100,8 @@ var TrandingSlider = new Swiper('.tranding-slider', {
       prevEl: '.swiper-button-prev',
     }
   });
-  console.log('Hola')
-  
 
+  
   document.getElementById("login-form").addEventListener("submit", (event) => {
     event.preventDefault();
   
