@@ -4,11 +4,7 @@ from django.http import HttpResponse
 from django.conf import settings
 from django.conf.urls.static import static
 from manga.views import formRevista, listaRevista, deleR, updaR, formNombreManga, listaNombreManga, deleN, updaN, formMangaGatsu, listaMangaGatsu, deleM, updaM, formCapitulo, listaCapitulo, deleC, updaC, formImagen, listaImagen, deleI, updaI
-<<<<<<< HEAD
-from .views import HomeView, LoginView, RecientesView, TopMangasView, SobreGatsuView, MiBibliotecaView, RecuperarView
-=======
 from .views import HomeView, RecientesView, TopMangasView, SobreGatsuView, MiBibliotecaView
->>>>>>> 32c02f6c25973991b0aaf9723ae0963691e984ba
 
 urlpatterns = [
 
