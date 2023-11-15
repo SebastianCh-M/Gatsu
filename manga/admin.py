@@ -51,7 +51,6 @@ class ImagenAdmin(admin.ModelAdmin):
 @admin.register(Capitulo)
 class CapituloAdmin(admin.ModelAdmin):
     list_display = ('id', 'titulo', 'numero', 'fecha_publicacion', 'manga')
-    inlines = [ImagenInLine]
 
     def __str__(self):
         return f"Capítulo {self.numero} - {self.titulo}"
