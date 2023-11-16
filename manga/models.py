@@ -1,10 +1,13 @@
 from django.db import models
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from multiselectfield import MultiSelectField
 from django.conf import settings
+=======
+>>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 =======
 >>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 =======
@@ -54,6 +57,7 @@ class Manga3(models.Model):
     #imagen = MultiImageField()
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -189,6 +193,8 @@ class Valoracion(models.Model):
 =======
 =======
 >>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
+=======
+>>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 class SetImagen(models.Model):
     idLote = models.CharField(max_length=255, primary_key=True)
     capitulo= models.CharField(max_length=50) 
@@ -196,11 +202,14 @@ class SetImagen(models.Model):
     grupoImagen = models.ImageField(upload_to='D:\Django Proyectos\Gatsu\static\images')
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 
 =======
 >>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 
+=======
+>>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 
 
 

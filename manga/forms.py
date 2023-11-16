@@ -2,7 +2,11 @@ from django import forms
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from .models import Revista, NombreManga, MangaGatsu, Capitulo, Imagen
+=======
+from .models import Post, Manga3, SetImagen
+>>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 =======
 from .models import Post, Manga3, SetImagen
 >>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
