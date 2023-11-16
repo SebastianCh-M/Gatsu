@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import tipoEstado, tipoSubida, Manga3, Usuario, Administrador, MangaGatsu, Capitulo, Imagen, RegistroPago, Comentario, Valoracion, Revista, NombreManga, Revista2
+from .models import tipoEstado, tipoSubida, Manga3, Usuario, Administrador, MangaGatsu, Capitulo, Imagen, RegistroPago, Comentario, Valoracion, Revista, NombreManga
 from django.utils.safestring import mark_safe
 
 
@@ -11,11 +11,6 @@ class subidaAdmin(admin.ModelAdmin):
 
 class estadoAdmin(admin.ModelAdmin):
     list_display = ["estado"]
-
-class editorialAdmin(admin.ModelAdmin):
-    list_display = ["editorial_id","editoriales"]    
-
-admin.site.register(Revista2, editorialAdmin)    
 
 
 
