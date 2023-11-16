@@ -1,8 +1,11 @@
 from django.db import models
+<<<<<<< HEAD
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from multiselectfield import MultiSelectField
 from django.conf import settings
+=======
+>>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 
 # Create your models here.
 
@@ -35,18 +38,20 @@ class tipoEstado(models.Model):
 
 
 class Manga3(models.Model):
-    idManga = models.CharField(max_length=30, primary_key=True)
-    nombreManga = models.CharField(max_length=50)
+    idManga=models.CharField(max_length=30, primary_key=True)
+    nombreManga=models.CharField(max_length=50)
     ano_publicacion = models.CharField(max_length=50)
-    tsubida = models.ForeignKey(tipoSubida, on_delete=models.CASCADE)
-    mangaka = models.CharField(max_length=50)
-    sinopsis = models.CharField(max_length=500)
-    editorial = models.CharField(max_length=50)
-    genero = models.CharField(max_length=50)
-    estado = models.ForeignKey(tipoEstado, on_delete=models.CASCADE)
-    imagen = models.ImageField(upload_to='images', storage=FileSystemStorage(location=settings.MEDIA_ROOT))
+    tsubida=models.ForeignKey(tipoSubida, on_delete=models.CASCADE)
+    mangaka=models.CharField(max_length=50)
+    sinopsis=models.CharField(max_length=500)
+    editorial=models.CharField(max_length=50)
+    genero=models.CharField(max_length=50)
+    estado=models.ForeignKey(tipoEstado, on_delete=models.CASCADE)
+    imagen = models.ImageField(upload_to='D:\Django Proyectos\Gatsu\static\images')  # configurar la ubicación de almacenamiento según tus necesidades 
+    #imagen = MultiImageField()
 
 
+<<<<<<< HEAD
 
 
 class Usuario(models.Model):
@@ -177,6 +182,14 @@ class Valoracion(models.Model):
         return f"Valoración de {self.usuario.nombre} en {self.manga.nombre}"
     
 
+=======
+class SetImagen(models.Model):
+    idLote = models.CharField(max_length=255, primary_key=True)
+    capitulo= models.CharField(max_length=50) 
+    manga = models.ForeignKey(Manga3, on_delete=models.CASCADE)
+    grupoImagen = models.ImageField(upload_to='D:\Django Proyectos\Gatsu\static\images')
+        
+>>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 
 
 

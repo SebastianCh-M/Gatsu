@@ -1,6 +1,10 @@
 from django import forms
 
+<<<<<<< HEAD
 from .models import Revista, NombreManga, MangaGatsu, Capitulo, Imagen
+=======
+from .models import Post, Manga3, SetImagen
+>>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 
 # pip install django-multiupload
 from multiupload.fields import MultiFileField
