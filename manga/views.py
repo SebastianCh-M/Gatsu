@@ -332,3 +332,4 @@ def formManga(request):
         # Render the form page
 #        mangas = Manga3.objects.all()
 #        return render(request, 'capitulos_form.html', {'mangas': mangas})
+
