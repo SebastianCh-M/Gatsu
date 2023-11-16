@@ -80,6 +80,9 @@ urlpatterns = [
     path('manga_create.html', registrarManga),
     path('manga_list.html', manga_list),
 >>>>>>> 3f0c3e9e3b892dea795a430e815d05c7044d56e9
+<<<<<<< HEAD
+>>>>>>> parent of da5250f (pequeño commit)
+=======
 >>>>>>> parent of da5250f (pequeño commit)
 ] 
 
