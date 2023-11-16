@@ -1,54 +1,21 @@
 from django.contrib import admin
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-from .models import tipoEstado, tipoSubida, Manga3, Usuario, Administrador, MangaGatsu, Capitulo, Imagen, RegistroPago, Comentario, Valoracion, Revista, NombreManga, Revista2
+from .models import tipoEstado, tipoSubida, Manga3, Usuario, Administrador, MangaGatsu, Capitulo, Imagen, RegistroPago, Comentario, Valoracion, Revista, NombreManga
 from django.utils.safestring import mark_safe
-=======
-from .models import tipoEstado, tipoSubida, Manga3, SetImagen
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-=======
-from .models import tipoEstado, tipoSubida, Manga3, SetImagen
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-=======
-from .models import tipoEstado, tipoSubida, Manga3, SetImagen
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 
-# Register your models here.
+
+class ImagenInLine(admin.TabularInline):
+    model = Imagen
 
 class subidaAdmin(admin.ModelAdmin):
-    list_display=["subida"]
+    list_display = ["subida"]
 
 class estadoAdmin(admin.ModelAdmin):
-    list_display=["estado"]
-
-class mangaAdmin(admin.ModelAdmin):
-    list_display=['idManga', 'nombreManga', 'ano_publicacion','tsubida','mangaka','sinopsis','editorial','genero','estado','imagen']    
-
-class imagenAdmin(admin.ModelAdmin):
-    list_display=['idLote','capitulo','manga','grupoImagen']    
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-class editorialAdmin(admin.ModelAdmin):
-    list_display = ["editorial_id","editoriales"]    
-
-admin.site.register(Revista2, editorialAdmin)    
-=======
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-=======
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
+    list_display = ["estado"]
 
 
-
-
-#-------------Registro----------------------
 
 admin.site.register(tipoSubida, subidaAdmin)
 admin.site.register(tipoEstado, estadoAdmin)     
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 admin.site.register(Manga3)
 admin.site.register(Revista)  # Registrar la tabla Revista
 
@@ -103,15 +70,3 @@ class UsuarioAdmin(admin.ModelAdmin):
 @admin.register(NombreManga)
 class NombreMangaAdmin(admin.ModelAdmin):
     list_display = ('id', 'revista', 'nombreManga', 'mangaka')
-=======
-admin.site.register(Manga3, mangaAdmin)
-admin.site.register(SetImagen, imagenAdmin)
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-=======
-admin.site.register(Manga3, mangaAdmin)
-admin.site.register(SetImagen, imagenAdmin)
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-=======
-admin.site.register(Manga3, mangaAdmin)
-admin.site.register(SetImagen, imagenAdmin)
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)

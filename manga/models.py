@@ -1,17 +1,8 @@
 from django.db import models
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from multiselectfield import MultiSelectField
 from django.conf import settings
-=======
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-=======
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-=======
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
 
 # Create your models here.
 
@@ -44,22 +35,18 @@ class tipoEstado(models.Model):
 
 
 class Manga3(models.Model):
-    idManga=models.CharField(max_length=30, primary_key=True)
-    nombreManga=models.CharField(max_length=50)
+    idManga = models.CharField(max_length=30, primary_key=True)
+    nombreManga = models.CharField(max_length=50)
     ano_publicacion = models.CharField(max_length=50)
-    tsubida=models.ForeignKey(tipoSubida, on_delete=models.CASCADE)
-    mangaka=models.CharField(max_length=50)
-    sinopsis=models.CharField(max_length=500)
-    editorial=models.CharField(max_length=50)
-    genero=models.CharField(max_length=50)
-    estado=models.ForeignKey(tipoEstado, on_delete=models.CASCADE)
-    imagen = models.ImageField(upload_to='D:\Django Proyectos\Gatsu\static\images')  # configurar la ubicación de almacenamiento según tus necesidades 
-    #imagen = MultiImageField()
+    tsubida = models.ForeignKey(tipoSubida, on_delete=models.CASCADE)
+    mangaka = models.CharField(max_length=50)
+    sinopsis = models.CharField(max_length=500)
+    editorial = models.CharField(max_length=50)
+    genero = models.CharField(max_length=50)
+    estado = models.ForeignKey(tipoEstado, on_delete=models.CASCADE)
+    imagen = models.ImageField(upload_to='images', storage=FileSystemStorage(location=settings.MEDIA_ROOT))
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 class Usuario(models.Model):
@@ -83,15 +70,12 @@ class Administrador(models.Model):
 
     def __str__(self):
         return self.nombre
-
-#POST,DELETE,UPDATE    
+    
 class Revista(models.Model):
     editoriales = models.CharField(max_length=100)
 
     def __str__(self):
         return self.editoriales
-
-
 
 class NombreManga(models.Model):
     revista = models.ForeignKey(Revista, on_delete=models.CASCADE)
@@ -142,7 +126,6 @@ class MangaGatsu(models.Model):
     def __str__(self):
         return str(self.nombre_manga.nombreManga)
 
-#POST,DELETE,UPDATE
 class Capitulo(models.Model):
     titulo = models.CharField(max_length=100)
     numero = models.IntegerField()
@@ -188,38 +171,6 @@ class Valoracion(models.Model):
 
     def __str__(self):
         return f"Valoración de {self.usuario.nombre} en {self.manga.nombre}"
-    
 
-=======
-=======
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-=======
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-class SetImagen(models.Model):
-    idLote = models.CharField(max_length=255, primary_key=True)
-    capitulo= models.CharField(max_length=50) 
-    manga = models.ForeignKey(Manga3, on_delete=models.CASCADE)
-    grupoImagen = models.ImageField(upload_to='D:\Django Proyectos\Gatsu\static\images')
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-
-=======
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-
-=======
->>>>>>> parent of 0db9525 (Merge pull request #97 from SebastianCh-M/main)
-
-
-
-
-#NO TOMAR EN CUENTA
-class Revista2(models.Model):
-    editorial_id = models.AutoField(primary_key=True)
-    editoriales = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.editoriales
 
 
