@@ -18,12 +18,9 @@ const analytics = getAnalytics(app);
 const auth = getAuth();
 
 export class ManageAccount {
-  register(email, password) {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((_) => {
-      /*
-      guardar usuario firestore, guardar-obejot [email, tipo user(default), mangasfav[](vacío), datos usuarios] 
-      */
+register(email, password) {
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((_) => {
       window.location.href = "Home.html";
       // Mostrar alerta de registro exitoso
       alert("Registro exitoso. Serás redirigido a la página de inicio de sesión.");
@@ -38,14 +35,6 @@ export class ManageAccount {
 authenticate(email, password) {
   signInWithEmailAndPassword(auth, email, password)
     .then((_) => {
-      /*
-      1.- obtener colecicón usuarios
-      2.- filtrar usuario for email
-      2.5.- colocar más campos
-      3.- guardar usuario[]
-      4.- return usuario[]
-      5.- 
-      */
       window.location.href = "Home.html";
       // Mostrar alerta de inicio de sesión exitoso
       alert("Has iniciado sesión correctamente. Serás redirigido a la página principal.");
@@ -113,8 +102,9 @@ var TrandingSlider = new Swiper('.tranding-slider', {
       prevEl: '.swiper-button-prev',
     }
   });
-
+  console.log('Hola')
   
+
   document.getElementById("login-form").addEventListener("submit", (event) => {
     event.preventDefault();
   
