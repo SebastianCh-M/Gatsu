@@ -230,6 +230,14 @@ def updaI(request, id):
     return render(request, 'modImagen.html', context)
 
 
+
+#METODO ver capitulo
+def verCapitulo(request, id):
+    capitulo = Capitulo.objects.get(id=id)
+    imagenes = Imagen.objects.all()
+    
+    return render(request, 'verCapitulo.html', {'capitulos': capitulo, 'imagenes': imagenes})
+
     
              
     
